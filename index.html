@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en" ng-app="rwdRandomiser">
+<head>
+    <meta charset="UTF-8"/>
+    <title>RWD Randomiser</title>
+</head>
+<body ng-controller="AppController">
+<h1>RWD Randomiser</h1>
+<form ng-submit="randomise()">
+    <label>URL <input ng-model="model.url" type="url" /></label>
+    <input type="submit" value="Go"/>
+</form>
+<section>
+    <iframe></iframe>
+    <p><strong>{{model.width}}</strong> x <strong>{{model.height}}</strong></p>
+</section>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0-rc.0/angular.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
