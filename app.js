@@ -19,7 +19,7 @@ angular.module("rwdRandomiser", [])
 
 		angular.extend($scope, {
             model: {
-                url: "http://davidgoss.co.uk/",
+                url: "http://davidgoss.co/",
                 width: 320,
                 height: 480
             },
