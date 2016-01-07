@@ -1,4 +1,4 @@
-require(["generator"], function(generator) {
+require(["helpers"], function(helpers) {
     angular.module("rwdRandomiser", [])
         // using custom interpolation symbols to avoid conflicts with jekyll
         .config(["$interpolateProvider", function($interpolateProvider) {
@@ -7,11 +7,8 @@ require(["generator"], function(generator) {
         }])
         .controller("AppController", ["$scope", function($scope) {
             function randomise() {
-                var maxWidth = window.innerWidth - 50,
-                    maxHeight = window.innerHeight - 200;
-
-                $scope.model.width = generator(maxWidth / 4, maxWidth);
-                $scope.model.height = generator(maxHeight / 2, maxHeight);
+                $scope.model.width = helpers.getRandomLength(320, window.innerWidth - 100);
+                $scope.model.height = helpers.getRandomLength(320, window.innerHeight - 200);
 
                 $scope.iframe
                     .attr("width", $scope.model.width)
