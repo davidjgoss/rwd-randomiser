@@ -1,19 +1,27 @@
+---
+# Just enough front matter...
+---
 <!doctype html>
-<html lang="en" ng-app="rwdRandomiser">
+<html lang="en" ng-app="rwdRandomiser" ng-strict-di>
 <head>
     <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width" />
     <title>RWD Randomiser</title>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Passion+One" />
+    <link rel="stylesheet" href="css/style.css" />
 </head>
 <body ng-controller="AppController">
-<h1>RWD Randomiser</h1>
-<form ng-submit="randomise()">
-    <label>URL <input ng-model="model.url" type="url" /></label>
-    <input type="submit" value="Go"/>
-</form>
-<section>
-    <iframe></iframe>
-    <p><strong>{{model.width}}</strong> x <strong>{{model.height}}</strong></p>
-</section>
+
+<header class="banner">
+    <h1 class="headline"><b class="headline__highlight">RWD</b>Randomiser</h1>
+    <form ng-submit="randomise()" class="form">
+        <p class="dimensions">## model.width ##<b class="dimensions__x">x</b>## model.height ##</p>
+        <input ng-model="model.url" type="url" class="form__input" /><button type="submit" class="form__button"><b class="form__button-text">Go</b></button>
+    </form>
+</header>
+
+<iframe></iframe>
+
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 <script src="js/app.js"></script>
 </body>

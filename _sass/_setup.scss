@@ -1,0 +1,13 @@
+$base-font: -apple-system,
+    "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue",
+    "Helvetica", sans-serif;
+$headline-font: "Passion One", $base-font;
+
+$highlight-color: rgb(250, 205, 57);
+
+@keyframes spin {
+    0% { transform: rotate(0deg) }
+    100% { transform: rotate(360deg) }
+}

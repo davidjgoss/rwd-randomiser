@@ -1,0 +1,16 @@
+html {
+    font-family: $base-font;
+    font-size: 16px;
+    background-color: #333;
+    background-image: linear-gradient(135deg,
+        #222 25%,
+        transparent 25%, transparent 50%,
+        #222 50%, #222 75%,
+        transparent 75%, transparent);
+    background-size: 8px 8px;
+    color: #fff;
+}
+
+body {
+    line-height: 1.5em;
+}

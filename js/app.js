@@ -1,5 +1,10 @@
 angular.module("rwdRandomiser", [])
-	.controller("AppController", function($scope) {
+	// using custom interpolation symbols to avoid conflicts with jekyll
+	.config(["$interpolateProvider", function($interpolateProvider) {
+		$interpolateProvider.startSymbol("##");
+		$interpolateProvider.endSymbol("##");
+	}])
+	.controller("AppController", ["$scope", function($scope) {
 		function randomInt(min, max) {
 			return Math.floor(Math.random() * (max - min + 1) + min);
 		}
@@ -28,4 +33,4 @@ angular.module("rwdRandomiser", [])
 		});
 
         randomise();
-	});
+	}]);
