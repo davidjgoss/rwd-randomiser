@@ -1,10 +1,5 @@
 require(["helpers"], function(helpers) {
     angular.module("rwdRandomiser", [])
-        // using custom interpolation symbols to avoid conflicts with jekyll
-        .config(["$interpolateProvider", function($interpolateProvider) {
-            $interpolateProvider.startSymbol("##");
-            $interpolateProvider.endSymbol("##");
-        }])
         .controller("AppController", ["$scope", function($scope) {
             function randomise() {
                 $scope.model.width = helpers.getRandomLength(320, window.innerWidth - 100);
