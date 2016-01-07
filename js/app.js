@@ -4,6 +4,7 @@ require(["helpers"], function(helpers) {
             function randomise() {
                 $scope.model.width = helpers.getRandomLength(320, window.innerWidth - 100);
                 $scope.model.height = helpers.getRandomLength(320, window.innerHeight - 200);
+                $scope.model.url = helpers.fixupURL($scope.model.url);
 
                 $scope.iframe
                     .attr("width", $scope.model.width)
